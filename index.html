@@ -1,10 +1,199 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Coming Soon</title>
-  </head>
-  <body>
-    <h1>Coming Soon</h1>
-    <p>This site is under construction.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Matt Troutman</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Barlow:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =====================
+       DESIGN TOKENS
+       ===================== */
+    :root {
+      --bg:       #f7f5f2;
+      --ink:      #1a1917;
+      --mid:      #7a7672;
+      --accent:   #b5432a;
+      --rule:     #d9d5d0;
+    }
+
+    /* =====================
+       RESET & BASE
+       ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 3rem 2rem;
+    }
+
+    /* =====================
+       HEADER / NAMEPLATE
+       ===================== */
+    header {
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--rule);
+      padding: 1.25rem 0;
+      margin-bottom: auto;
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+
+    /* =====================
+       MAIN CONTENT
+       ===================== */
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      padding: 4rem 0;
+      max-width: 38rem;
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 1.25rem;
+    }
+
+    .message {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1.35rem, 3vw, 1.75rem);
+      line-height: 1.55;
+      color: var(--ink);
+      margin-bottom: 2.5rem;
+    }
+
+    .redirect {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 0.1rem;
+      transition: opacity 0.2s;
+    }
+
+    .redirect:hover { opacity: 0.65; }
+
+    .redirect-arrow {
+      font-style: normal;
+      transition: transform 0.2s;
+    }
+
+    .redirect:hover .redirect-arrow { transform: translateX(3px); }
+
+    /* =====================
+       FOOTER
+       ===================== */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 1rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    /* =====================
+       FUTURE NAV STYLES
+       (uncomment when ready)
+       =====================
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--mid);
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--ink); }
+
+    */
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================
+       HEADER
+       ===================== -->
+  <header>
+    <h1>Matt Troutman</h1>
+
+    <!--
+    FUTURE NAV — uncomment when pages are ready:
+
+    <nav>
+      <a href="/teaching/">Teaching</a>
+      <a href="/projects/">Projects</a>
+    </nav>
+    -->
+  </header>
+
+  <!-- =====================
+       MAIN
+       ===================== -->
+  <main>
+    <p class="eyebrow">Nothing to see here — yet</p>
+
+    <p class="message">
+      This site is still finding its shape. In the meantime,
+      here is somewhere more useful to be.
+    </p>
+
+    <a class="redirect" href="https://www.redcross.org.au" target="_blank" rel="noopener noreferrer">
+      Australian Red Cross <span class="redirect-arrow">→</span>
+    </a>
+  </main>
+
+  <!-- =====================
+       FOOTER
+       ===================== -->
+  <footer>
+    <span>More to come.</span>
+  </footer>
+
+</body>
 </html>
